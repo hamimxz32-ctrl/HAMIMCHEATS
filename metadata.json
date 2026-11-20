@@ -1,0 +1,6 @@
+{
+  "name": "Codigos Client",
+  "description": "Root status, device telemetry, and profile bundle utility.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

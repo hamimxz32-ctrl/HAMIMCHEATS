@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-19T00:00:00Z",
+  "appTitle": "Codigos Client",
+  "version": {
+    "displayVersion": "1.0.0",
+    "latestBuild": 1,
+    "updateBannerEnabled": false,
+    "updateTitle": "Update Ready",
+    "updateMessage": "Version 1.0.0 is live.",
+    "updateUrl": ""
+  },
+  "maintenance": {
+    "enabled": false,
+    "title": "Maintenance",
+    "message": "Remote services are temporarily paused."
+  },
+  "announcement": {
+    "enabled": true,
+    "title": "Codigos Client",
+    "message": "Remote configuration active.",
+    "severity": "info"
+  },
+  "ui": {
+    "accentColorHex": "#FF4D8D",
+    "sparkleBackdropDefault": true,
+    "showQuickStats": true,
+    "showOverlaySection": true
+  },
+  "games": [
+    {
+      "id": "free_fire",
+      "name": "Free Fire",
+      "packageName": "com.dts.freefireth",
+      "edition": "Standard",
+      "resourceSizeMb": 18.4,
+      "enabled": true
+    },
+    {
+      "id": "free_fire_max",
+      "name": "Free Fire MAX",
+      "packageName": "com.dts.freefiremax",
+      "edition": "Ultra",
+      "resourceSizeMb": 24.8,
+      "enabled": true
+    }
+  ]
+}

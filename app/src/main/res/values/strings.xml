@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Codigos Client</string>
+    <string name="nav_games">Games</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_settings">Settings</string>
+
+    <string name="root_required_title">Root Required</string>
+    <string name="root_granted_title">Root Active</string>
+    <string name="btn_info">Info</string>
+    <string name="btn_recheck">Recheck</string>
+    <string name="btn_close">Close</string>
+    <string name="btn_sync">Sync</string>
+    <string name="btn_syncing">Syncing</string>
+    <string name="btn_open_update">Open Update</string>
+
+    <string name="root_info_dialog_title">Root Access</string>
+    <string name="root_info_dialog_body">Checks for superuser access via Magisk, KernelSU, or SuperSU. Allow access in your root manager and tap Recheck.</string>
+
+    <string name="games_section_title">Profiles</string>
+    <string name="btn_prepare_resource">Download Resource</string>
+    <string name="btn_preparing_resource">Preparing…</string>
+    <string name="btn_clear_resource">Clear Bundle</string>
+    <string name="resource_ready_label">Resource Ready</string>
+    <string name="btn_overlay_permission">Grant Overlay Permission</string>
+    <string name="overlay_granted">Overlay: Granted</string>
+    <string name="overlay_not_granted">Overlay: Not Granted</string>
+    <string name="overlay_badge_toggle">Floating Logo Overlay</string>
+
+    <string name="profile_title">Device Profile</string>
+    <string name="profile_hwid_label">HWID</string>
+    <string name="profile_android_label">Android</string>
+    <string name="profile_model_label">Model</string>
+    <string name="profile_abi_label">ABIs</string>
+    <string name="profile_ram_label">Memory</string>
+    <string name="profile_storage_label">Storage</string>
+    <string name="profile_root_label">Root</string>
+    <string name="profile_env_label">Environment</string>
+    <string name="copied_label">Copied</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="setting_secure_mode">Secure Mode</string>
+    <string name="setting_emulator_mode">Emulator Mode</string>
+    <string name="setting_auto_root">Auto Root Check</string>
+    <string name="setting_sparkles">Sparkle Backdrop</string>
+    <string name="remote_config_section">Remote Sync</string>
+    <string name="remote_url_label">GitHub Raw Config URL</string>
+    <string name="about_section_title">About</string>
+    <string name="cd_back">Navigate back</string>
+    <string name="cd_root_warning">Root warning</string>
+    <string name="cd_game_icon">Game icon</string>
+    <string name="cd_copy_hwid">Copy HWID</string>
+    <string name="cd_app_emblem">Codigos Client logo</string>
+    <string name="cd_sync">Sync remote configuration</string>
+</resources>

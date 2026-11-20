@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Codigos Client Admin</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/logo.jpg" alt="Codigos Client Logo" class="brand-logo" />
+      <div>
+        <h1>Codigos Client</h1>
+        <span class="badge">Remote Config Admin</span>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <button id="reloadBtn" class="btn btn-outline" type="button">Reload</button>
+      <button id="publishBtn" class="btn btn-primary" type="button">Publish</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="authCard" class="card hidden">
+      <h2>Admin Sign In</h2>
+      <div class="grid-two">
+        <label class="field">
+          <span>Admin Password</span>
+          <input id="adminPassword" type="password" autocomplete="current-password" />
+        </label>
+      </div>
+      <button id="loginBtn" class="btn btn-primary" type="button">Sign In</button>
+    </section>
+
+    <div id="statusBanner" class="status-banner hidden"></div>
+
+    <section class="card">
+      <h2>GitHub Repository</h2>
+      <div class="grid-two">
+        <label class="field">
+          <span>Owner</span>
+          <input id="ghOwner" type="text" placeholder="your-github-username" />
+        </label>
+        <label class="field">
+          <span>Repository</span>
+          <input id="ghRepo" type="text" placeholder="codigos-client" />
+        </label>
+        <label class="field">
+          <span>Branch</span>
+          <input id="ghBranch" type="text" value="main" />
+        </label>
+        <label class="field">
+          <span>Config Path</span>
+          <input id="ghPath" type="text" value="remote-config/app-config.json" />
+        </label>
+      </div>
+      <div id="tokenContainer" class="field">
+        <span>GitHub Token (Session Only - Never Saved in Source)</span>
+        <input id="ghToken" type="password" placeholder="ghp_... (optional if set on server .env)" />
+      </div>
+      <p id="rawUrlPreview" class="raw-url"></p>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>Announcement</h2>
+        <label class="switch">
+          <input id="annEnabled" type="checkbox" />
+          <span>Enabled</span>
+        </label>
+      </div>
+      <div class="grid-two">
+        <label class="field">
+          <span>Title</span>
+          <input id="annTitle" type="text" />
+        </label>
+        <label class="field">
+          <span>Severity</span>
+          <select id="annSeverity">
+            <option value="info">Info</option>
+            <option value="warning">Warning</option>
+            <option value="promo">Highlight</option>
+          </select>
+        </label>
+      </div>
+      <label class="field">
+        <span>Message</span>
+        <textarea id="annMessage" rows="2"></textarea>
+      </label>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>Maintenance Mode</h2>
+        <label class="switch">
+          <input id="maintEnabled" type="checkbox" />
+          <span>Enabled</span>
+        </label>
+      </div>
+      <div class="grid-two">
+        <label class="field">
+          <span>Title</span>
+          <input id="maintTitle" type="text" />
+        </label>
+        <label class="field">
+          <span>Message</span>
+          <input id="maintMessage" type="text" />
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>App Version Display</h2>
+        <label class="switch">
+          <input id="verBannerEnabled" type="checkbox" />
+          <span>Update Banner</span>
+        </label>
+      </div>
+      <div class="grid-two">
+        <label class="field">
+          <span>Display Version</span>
+          <input id="verDisplay" type="text" />
+        </label>
+        <label class="field">
+          <span>Latest Build</span>
+          <input id="verBuild" type="number" min="1" />
+        </label>
+        <label class="field">
+          <span>Update Title</span>
+          <input id="verTitle" type="text" />
+        </label>
+        <label class="field">
+          <span>Update URL</span>
+          <input id="verUrl" type="url" placeholder="https://..." />
+        </label>
+      </div>
+      <label class="field">
+        <span>Update Message</span>
+        <input id="verMessage" type="text" />
+      </label>
+    </section>
+
+    <section class="card">
+      <h2>UI Settings</h2>
+      <div class="grid-two">
+        <label class="field">
+          <span>App Title</span>
+          <input id="uiAppTitle" type="text" maxlength="30" />
+        </label>
+        <label class="field">
+          <span>Accent Color</span>
+          <div class="color-row">
+            <input id="uiAccentPicker" type="color" value="#FF4D8D" />
+            <input id="uiAccentHex" type="text" value="#FF4D8D" maxlength="7" />
+          </div>
+        </label>
+      </div>
+      <div class="toggle-grid">
+        <label class="switch">
+          <input id="uiSparkles" type="checkbox" />
+          <span>Sparkle Backdrop Default</span>
+        </label>
+        <label class="switch">
+          <input id="uiQuickStats" type="checkbox" />
+          <span>Show Device Stats</span>
+        </label>
+        <label class="switch">
+          <input id="uiOverlaySection" type="checkbox" />
+          <span>Show Overlay Controls</span>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Remote Profiles</h2>
+      <div id="gamesList" class="games-list"></div>
+    </section>
+
+    <section class="card">
+      <h2>JSON Preview</h2>
+      <pre id="jsonPreview" class="json-preview"></pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
